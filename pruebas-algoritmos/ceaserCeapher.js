@@ -10,21 +10,29 @@ All letters will be uppercase. Do not transform any non-alphabetic character (i.
 */
 
 function rot13(str) {
-    let string="";
+let string="";
+let val;
 str.split("");
 for (let i=0;i<str.length;i++){
-   if (str.charCodeAt(i)){
-       
-   }
-   string+=String.fromCharCode(str.charCodeAt(i));
+    console.log(str.charCodeAt(i));
+    if (str.charCodeAt(i)==32 || str.charCodeAt(i)==33 || str.charCodeAt(i)==63 || str.charCodeAt(i)==46){
+     string+=str[i];
+    }
+    else{
+        if (str.charCodeAt(i)>=77){
+
+        val=str.charCodeAt(i)-13;
+        string+=String.fromCharCode(val);
+        // console.log(String.fromCharCode(val));
+        }
+        else {
+        val=str.charCodeAt(i)+13;
+        string+=String.fromCharCode(val);
+        }
 }
-// string=string.substring(0,string.length-1);
-console.log(string);
-console.log(String.fromCharCode(70,82,69,69,32,));
 
-
-
-    return str;
-  }
+}
+    return string;
+}
   
-  rot13("SERR PBQR PNZC");
+rot13("SERR YBIR?")
