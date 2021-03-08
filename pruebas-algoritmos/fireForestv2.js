@@ -21,7 +21,7 @@ let arr=[];
 let parar=false;
 let arbolesSinQuemar=null;
 let minimoXY=3;
-let randomXY=10;
+let randomXY=1000;
 let cont=0;
 
 // Se genera dos coordenadas entre 0 y 10 para definir la matriz
